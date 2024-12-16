@@ -18,11 +18,11 @@ def generate_manifest(version):
         "name": f"Stremio + Real Debrid Israel Build",
         "description": f"Stremio + Real Debrid Israel Build Version Check.",
         "resources": ["catalog"],
-        "types": ["movie"],
+        "types": ["other"],
         "logo": STREMIO7RD_URL,
         "catalogs": [
             {
-                "type": "movie",
+                "type": "other",
                 "id": "info_catalog",
                 "name": "Stremio + Real Debrid Israel ברוכים הבאים לבילד של"
             }
@@ -43,11 +43,11 @@ def manifest(current_version):
     manifest_data = generate_manifest(current_version)
     return respond_with(manifest_data)
 
-@app.route("/<current_version>/catalog/movie/info_catalog.json")
-@app.route("/catalog/movie/info_catalog.json")
+@app.route("/<current_version>/catalog/other/info_catalog.json")
+@app.route("/catalog/other/info_catalog.json")
 def catalog(current_version=None):
     """Return the catalog with text fetched from an external URL."""
-    print("[DEBUG] /catalog/movie/info_catalog.json endpoint was called.")
+    print("[DEBUG] /catalog/other/info_catalog.json endpoint was called.")
     
     if current_version is None:
         current_version = LATEST_VERSION
@@ -59,14 +59,14 @@ def catalog(current_version=None):
         {
             "id": "latest_version",
             "name": f"גרסה אחרונה: {LATEST_VERSION}",
-            "type": "movie",
+            "type": "other",
             "poster": STREMIO7RD_URL,
             "posterShape": "square"
         },
         {
             "id": "current_version",
             "name": f"גרסה נוכחית: {current_version}",
-            "type": "movie",
+            "type": "other",
             "poster": current_version_poster,
             "posterShape": "square"
         }
@@ -77,14 +77,14 @@ def catalog(current_version=None):
         {
             "id": "build_qr",
             "name": "סרוק להתקנה",
-            "type": "movie",
+            "type": "other",
             "poster": BUILD_QR_URL,
             "posterShape": "square"
         },
         {
             "id": "update_addon",
             "name": "!יש לעדכן את הבילד",
-            "type": "movie",
+            "type": "other",
             "poster": NEW_UPDATE_URL,
             "posterShape": "square"
         }
