@@ -12,7 +12,7 @@ NEW_UPDATE_URL = "https://i.imgur.com/RZcmX2e.png"
 # Define the manifest object
 MANIFEST = {
     "id": "org.stremio7rd.com",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "name": "Stremio + Real Debrid Israel Build",
     "description": "Stremio + Real Debrid Israel Build Version Information.",
     "resources": ["catalog"],
