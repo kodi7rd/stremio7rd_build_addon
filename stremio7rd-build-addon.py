@@ -16,7 +16,7 @@ BUILD_QR_URL = "https://i.imgur.com/wbnhJUp.png"
 # Render keep alive workaround
 RENDER_DEPLOYMENT_URL = "https://stremio7rd-build-addon.onrender.com/0.0.0/manifest.json"
 # Every 12 minutes
-KEEP_ALIVE_INTERVAL = 30
+KEEP_ALIVE_INTERVAL = 720
 ################################################################
 
 # Define a base manifest template
