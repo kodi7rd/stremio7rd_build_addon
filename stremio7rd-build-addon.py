@@ -16,7 +16,7 @@ def generate_manifest(version):
         "id": "org.stremio7rd.com",
         "version": version,
         "name": f"Stremio + Real Debrid Israel Build",
-        "description": f"Stremio + Real Debrid Israel Build Version.",
+        "description": f"Stremio + Real Debrid Israel Build Version Check.",
         "resources": ["catalog"],
         "types": ["movie"],
         "logo": STREMIO7RD_URL,
