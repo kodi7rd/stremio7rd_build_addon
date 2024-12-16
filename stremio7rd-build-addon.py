@@ -3,8 +3,6 @@ import requests
 
 app = Flask(__name__)
 
-# Constants
-LATEST_VERSION_URL = "https://kodi7rd.github.io/stremio7rd_build_addon/version.txt"
 # Posters
 STREMIO7RD_URL = "https://i.imgur.com/CRpsxpE.jpeg"
 RED_THUMBS_UP_URL = "https://i.imgur.com/HwcDn4G.png"
@@ -30,12 +28,12 @@ MANIFEST = {
 }
 
 def get_latest_version():
-    """Reads the version from the version.txt file in the same directory."""
+    """Reads the version from the latest_version.txt file in the same directory."""
     try:
-        with open("version.txt", "r") as f:
+        with open("latest_version.txt", "r") as f:
             return f.read().strip()
     except Exception as e:
-        print(f"[ERROR] Failed to read version.txt: {e}")
+        print(f"[ERROR] Failed to read latest_version.txt: {e}")
         return "שגיאה"  # Default to 0.0.0 if file read fails
 
 @app.route("/manifest.json")
