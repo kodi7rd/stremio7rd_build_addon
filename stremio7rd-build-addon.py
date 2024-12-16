@@ -83,6 +83,8 @@ def catalog(current_version=None):
             "name": "סרוק להתקנה",
             "type": "movie",
             "poster": BUILD_QR_URL,
+            "background": BUILD_QR_URL,
+            "logo": BUILD_QR_URL,
             "posterShape": "square"
         }
     ])
