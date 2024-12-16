@@ -14,7 +14,7 @@ GREEN_THUMBS_UP_URL = "https://i.imgur.com/eelwnv5.png"
 NEW_UPDATE_URL = "https://i.imgur.com/RZcmX2e.png"
 BUILD_QR_URL = "https://i.imgur.com/wbnhJUp.png"
 # Render keep alive workaround
-RENDER_DEPLOYMENT_URL = "https://stremio7rd-build-addon.onrender.com"
+RENDER_DEPLOYMENT_URL = "https://stremio7rd-build-addon.onrender.com/0.0.0/manifest.json"
 # Every 12 minutes
 KEEP_ALIVE_INTERVAL = 30
 ################################################################
