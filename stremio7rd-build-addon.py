@@ -28,14 +28,16 @@ def generate_manifest(version):
         ],
     }
 
+@app.route("/")
 @app.route("/manifest.json")
-@app.route("/<current_version>/manifest.json")
-def manifest(current_version=None):
-    """Return the manifest with dynamic version based on URL parameter or redirect to latest version."""
-    if current_version is None:  # No version in the URL, redirect to latest version
-        current_version = LATEST_VERSION
-        return redirect(f"/{current_version}/manifest.json")
+def default_manifest():
+    """Redirect root URL to default version manifest."""
+    """If the manifest URL is accessed without a version, redirect to the versioned URL."""
+    return redirect(f'/{LATEST_VERSION}/manifest.json')
 
+@app.route("/<current_version>/manifest.json")
+def manifest(current_version):
+    """Return the manifest for a specific version."""
     # Generate the manifest for the specific version
     manifest_data = generate_manifest(current_version)
     return respond_with(manifest_data)
