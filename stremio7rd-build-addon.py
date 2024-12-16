@@ -29,6 +29,15 @@ MANIFEST = {
     ],
 }
 
+def get_latest_version():
+    """Reads the version from the version.txt file in the same directory."""
+    try:
+        with open("version.txt1", "r") as f:
+            return f.read().strip()
+    except Exception as e:
+        print(f"[ERROR] Failed to read version.txt: {e}")
+        return "שגיאה"  # Default to 0.0.0 if file read fails
+
 @app.route("/manifest.json")
 def manifest():
     """Return the manifest."""
@@ -41,12 +50,7 @@ def catalog():
     print("[DEBUG] /catalog/movie/info_catalog.json endpoint was called.")
     try:
         current_version = str(MANIFEST['version'])
-        
-        try:
-            latest_version = str(requests.get(LATEST_VERSION_URL).text.strip())
-        except Exception as e:
-            print(f"[ERROR] Failed to fetch latest version: {e}")
-            latest_version = "0.0.0"
+        latest_version = get_latest_version()
 
         # Set the poster based on whether versions are equal or not
         current_version_poster = GREEN_THUMBS_UP_URL if current_version == latest_version else RED_THUMBS_UP_URL
