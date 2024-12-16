@@ -4,7 +4,6 @@ app = Flask(__name__)
 
 # Constants
 LATEST_VERSION = "1.0.0"
-# STREMIO7RD_URL = "https://i.ibb.co/yNJzLJ9/image.png"
 STREMIO7RD_URL = "https://i.imgur.com/CRpsxpE.jpeg"
 RED_THUMBS_UP_URL = "https://i.imgur.com/HwcDn4G.png"
 GREEN_THUMBS_UP_URL = "https://i.imgur.com/dJ1E3aj.png"
