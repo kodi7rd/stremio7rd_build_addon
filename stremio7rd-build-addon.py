@@ -60,13 +60,15 @@ def catalog(current_version=None):
             "id": "latest_version",
             "name": f"גרסה אחרונה: {LATEST_VERSION}",
             "type": "movie",
-            "poster": STREMIO7RD_URL
+            "poster": STREMIO7RD_URL,
+            "posterShape": "square"
         },
         {
             "id": "current_version",
             "name": f"גרסה נוכחית: {current_version}",
             "type": "movie",
-            "poster": current_version_poster
+            "poster": current_version_poster,
+            "posterShape": "square"
         }
     ]
     
@@ -76,7 +78,8 @@ def catalog(current_version=None):
             "id": "update_addon",
             "name": "!יש לעדכן את הבילד",
             "type": "movie",
-            "poster": NEW_UPDATE_URL
+            "poster": NEW_UPDATE_URL,
+            "posterShape": "square"
         },
         {
             "id": "build_qr",
