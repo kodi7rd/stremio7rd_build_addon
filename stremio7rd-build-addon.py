@@ -23,7 +23,7 @@ def generate_manifest(version):
             {
                 "type": "movie",
                 "id": "info_catalog",
-                "name": f"Stremio + Real Debrid Israel Build"
+                "name": "Stremio + Real Debrid Israel ברוכים הבאים לבילד של"
             }
         ],
     }
