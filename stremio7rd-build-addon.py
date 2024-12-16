@@ -6,7 +6,7 @@ app = Flask(__name__)
 LATEST_VERSION = "1.0.0"
 STREMIO7RD_URL = "https://i.imgur.com/CRpsxpE.jpeg"
 RED_THUMBS_UP_URL = "https://i.imgur.com/HwcDn4G.png"
-GREEN_THUMBS_UP_URL = "https://i.imgur.com/dJ1E3aj.png"
+GREEN_THUMBS_UP_URL = "https://i.imgur.com/5H8n9d0.png"
 NEW_UPDATE_URL = "https://i.imgur.com/RZcmX2e.png"
 
 # Define a base manifest template
