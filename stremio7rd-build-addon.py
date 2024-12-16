@@ -6,7 +6,7 @@ app = Flask(__name__)
 LATEST_VERSION = "1.0.0"
 STREMIO7RD_URL = "https://i.imgur.com/CRpsxpE.jpeg"
 RED_THUMBS_UP_URL = "https://i.imgur.com/HwcDn4G.png"
-GREEN_THUMBS_UP_URL = "https://i.imgur.com/aCNdSXk.png"
+GREEN_THUMBS_UP_URL = "https://i.imgur.com/eelwnv5.png"
 BLUE_RIGHT_ARROW_URL = "https://i.imgur.com/pMAJ7yw.png"
 BUILD_QR_URL = "https://i.imgur.com/wbnhJUp.png"
 
