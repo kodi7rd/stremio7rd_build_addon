@@ -82,7 +82,8 @@ def catalog(current_version=None):
             "id": "build_qr",
             "name": "סרוק להתקנה",
             "type": "movie",
-            "poster": BUILD_QR_URL
+            "poster": BUILD_QR_URL,
+            "posterShape": "square"
         }
     ])
         
