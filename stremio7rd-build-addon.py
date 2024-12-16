@@ -7,7 +7,7 @@ LATEST_VERSION = "1.0.0"
 STREMIO7RD_URL = "https://i.imgur.com/CRpsxpE.jpeg"
 RED_THUMBS_UP_URL = "https://i.imgur.com/HwcDn4G.png"
 GREEN_THUMBS_UP_URL = "https://i.imgur.com/eelwnv5.png"
-BLUE_RIGHT_ARROW_URL = "https://i.imgur.com/pMAJ7yw.png"
+NEW_UPDATE_URL = "https://i.imgur.com/RZcmX2e.png"
 BUILD_QR_URL = "https://i.imgur.com/wbnhJUp.png"
 
 # Define a base manifest template
@@ -75,17 +75,17 @@ def catalog(current_version=None):
     if current_version != LATEST_VERSION:
         catalog_entry.extend([
         {
-            "id": "update_addon",
-            "name": "!יש לעדכן את הבילד",
-            "type": "movie",
-            "poster": BLUE_RIGHT_ARROW_URL,
-            "posterShape": "square"
-        },
-        {
             "id": "build_qr",
             "name": "סרוק להתקנה",
             "type": "movie",
             "poster": BUILD_QR_URL,
+            "posterShape": "square"
+        },
+        {
+            "id": "update_addon",
+            "name": "!יש לעדכן את הבילד",
+            "type": "movie",
+            "poster": NEW_UPDATE_URL,
             "posterShape": "square"
         }
     ])
