@@ -7,7 +7,7 @@ LATEST_VERSION = "1.0.0"
 STREMIO7RD_URL = "https://i.imgur.com/CRpsxpE.jpeg"
 RED_THUMBS_UP_URL = "https://i.imgur.com/HwcDn4G.png"
 GREEN_THUMBS_UP_URL = "https://i.imgur.com/aCNdSXk.png"
-NEW_UPDATE_URL = "https://i.imgur.com/RZcmX2e.png"
+BLUE_RIGHT_ARROW_URL = "https://i.imgur.com/pMAJ7yw.png"
 BUILD_QR_URL = "https://i.imgur.com/wbnhJUp.png"
 
 # Define a base manifest template
@@ -78,7 +78,7 @@ def catalog(current_version=None):
             "id": "update_addon",
             "name": "!יש לעדכן את הבילד",
             "type": "movie",
-            "poster": NEW_UPDATE_URL,
+            "poster": BLUE_RIGHT_ARROW_URL,
             "posterShape": "square"
         },
         {
