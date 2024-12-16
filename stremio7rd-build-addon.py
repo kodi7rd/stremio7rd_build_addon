@@ -1,7 +1,11 @@
 from flask import Flask, jsonify, redirect
+import threading
+import requests
+import time
 
 app = Flask(__name__)
 
+################################################################
 # Constants
 LATEST_VERSION = "1.0.0"
 STREMIO7RD_URL = "https://i.imgur.com/CRpsxpE.jpeg"
@@ -9,6 +13,11 @@ RED_THUMBS_UP_URL = "https://i.imgur.com/HwcDn4G.png"
 GREEN_THUMBS_UP_URL = "https://i.imgur.com/eelwnv5.png"
 NEW_UPDATE_URL = "https://i.imgur.com/RZcmX2e.png"
 BUILD_QR_URL = "https://i.imgur.com/wbnhJUp.png"
+# Render keep alive workaround
+RENDER_DEPLOYMENT_URL = "https://stremio7rd-build-addon.onrender.com"
+# Every 12 minutes
+KEEP_ALIVE_INTERVAL = 720
+################################################################
 
 # Define a base manifest template
 def generate_manifest(version):
@@ -98,6 +107,19 @@ def respond_with(data):
     resp.headers['Access-Control-Allow-Headers'] = '*'
     return resp
 
+# Function to ping the service periodically
+def keep_server_alive():
+    while True:
+        try:
+            response = requests.get(RENDER_DEPLOYMENT_URL, timeout=10)
+            print(f"[DEBUG] Keep-Alive Ping Successful: {response.status_code}")
+        except Exception as e:
+            print(f"[ERROR] Keep-Alive Ping Failed: {e}")
+        time.sleep(KEEP_ALIVE_INTERVAL)
+
 if __name__ == "__main__":
+    # Start the keep-alive functionality in a separate thread
+    threading.Thread(target=keep_server_alive, daemon=True).start()
+    
     print("[DEBUG] Starting the Flask application on http://0.0.0.0:5000")
     app.run(host="0.0.0.0", port=5000, debug=True)
