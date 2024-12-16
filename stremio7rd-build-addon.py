@@ -32,7 +32,7 @@ MANIFEST = {
 def get_latest_version():
     """Reads the version from the version.txt file in the same directory."""
     try:
-        with open("version.txt1", "r") as f:
+        with open("version.txt", "r") as f:
             return f.read().strip()
     except Exception as e:
         print(f"[ERROR] Failed to read version.txt: {e}")
