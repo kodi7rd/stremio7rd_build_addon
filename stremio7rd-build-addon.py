@@ -71,7 +71,8 @@ def catalog(current_version=None):
     ]
     
     if current_version != LATEST_VERSION:
-        catalog_entry.append({
+        catalog_entry.extend([
+        {
             "id": "update_addon",
             "name": "!יש לעדכן את הבילד",
             "type": "movie",
@@ -82,7 +83,8 @@ def catalog(current_version=None):
             "name": "סרוק להתקנה",
             "type": "movie",
             "poster": BUILD_QR_URL
-        })
+        }
+    ])
         
     return respond_with({"metas": catalog_entry})
 
