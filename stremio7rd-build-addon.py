@@ -86,5 +86,5 @@ def respond_with(data):
     return resp
 
 if __name__ == "__main__":
-    print("[DEBUG] Starting the Flask application on http://0.0.0.0:7000")
+    print("[DEBUG] Starting the Flask application on http://0.0.0.0:5000")
     app.run(host="0.0.0.0", port=5000, debug=True)
