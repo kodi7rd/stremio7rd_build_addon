@@ -8,7 +8,7 @@ STREMIO7RD_URL = "https://i.imgur.com/CRpsxpE.jpeg"
 RED_THUMBS_UP_URL = "https://i.imgur.com/HwcDn4G.png"
 GREEN_THUMBS_UP_URL = "https://i.imgur.com/aCNdSXk.png"
 NEW_UPDATE_URL = "https://i.imgur.com/RZcmX2e.png"
-BUILD_QR_URL = "https://i.imgur.com/pxbE5CE.png"
+BUILD_QR_URL = "https://i.imgur.com/wbnhJUp.png"
 
 # Define a base manifest template
 def generate_manifest(version):
