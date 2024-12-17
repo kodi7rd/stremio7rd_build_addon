@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, redirect
+from flask import Flask, jsonify, redirect, render_template
 
 app = Flask(__name__)
 
@@ -32,6 +32,10 @@ def generate_manifest(version):
     }
 
 @app.route("/")
+def configure_page():
+    """Serve the index.html file."""
+    return render_template("index.html", LATEST_VERSION=LATEST_VERSION)
+
 @app.route("/manifest.json")
 def default_manifest():
     """Redirect root URL to default version manifest."""

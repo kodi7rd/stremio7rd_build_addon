@@ -1,0 +1,229 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background color */
+    color: #e0e0e0; /* Light text color */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #1e1e1e; /* Darker container background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.header-img {
+    max-width: 55%; /* Adjusted size */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+h1 {
+    color: #1e90ff; /* Bright blue color for header */
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #e0e0e0; /* Light text color */
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333; /* Dark border */
+    border-radius: 4px;
+    background-color: #333; /* Dark input background */
+    color: #e0e0e0; /* Light text color */
+    box-sizing: border-box;
+    direction: ltr; /* Left to right text direction */
+    text-align: left; /* Align text to the left */
+}
+/* Button group styling */
+.button-group {
+    display: flex; /* Use flexbox for the buttons */
+    justify-content: center; /* Center buttons horizontally */
+    gap: 10px; /* Space between buttons */
+}
+
+button {
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 200px; /* Fixed width for both buttons */
+    border: none;
+}
+
+#installButton {
+    background-color: #1e90ff; /* Blue background for the "התקן" button */
+    color: white;
+}
+
+#installButton:hover {
+    background-color: #1c86ee; /* Darker blue on hover */
+}
+
+#copyButton {
+    background-color: #555; /* Darker blue for "העתק קישור" button */
+    color: white;
+}
+
+#copyButton:hover {
+    background-color: #444; /* Even darker blue on hover */
+}
+
+.result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+.result.success {
+    color: #28a745; /* Green for success message */
+}
+.result.error {
+    color: #dc3545; /* Red for error message */
+}
+.divider {
+    margin: 30px 0;
+    border-top: 1px solid #444; /* Darker divider */
+}
+.footer-img {
+    max-width: 100%; /* Full width of the container */
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+.toggle-group {
+    display: flex; /* Use flexbox for the group */
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center items horizontally */
+    margin-bottom: 15px; /* Space below the toggle group */
+}
+.toggle-item {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    margin-bottom: 5px; /* Space between each toggle item */
+    width: auto; /* Allow items to take the required width */
+}
+.toggle-input {
+    display: none; /* Hide the default checkbox */
+}
+.toggle-label {
+    position: relative;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #ccc; /* Background color for off state */
+    border-radius: 20px; /* Rounded corners */
+    color: #fff; /* Text color */
+    transition: background-color 0.3s; /* Smooth transition */
+    width: 310px; /* Set a static width for the toggle */
+    text-align: center; /* Center the text */
+}
+.toggle-input:checked + .toggle-label {
+    background-color: #4CAF50; /* Background color for on state */
+}
+.toggle-input:checked + .toggle-label::after {
+    content: '✔'; /* Add the checkmark */
+    position: absolute;
+    right: 8px; /* Position it on the right */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #ffffff;
+}
+#customModal {
+    display: none; /* Keep it hidden by default */
+    position: fixed; /* Fixed position to overlay */
+    top: 0; /* Position at the top */
+    left: 0; /* Position at the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center; /* Center the modal horizontally */
+    align-items: center; /* Center the modal vertically */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+#customModal > div {
+    background-color: #1e1e1e; /* Dark background for the container */
+    color: #e0e0e0; /* Light text color for contrast */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Space around the content */
+    text-align: center; /* Center text */
+    width: 300px; /* Fixed width */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow */
+}
+
+#customModal button {
+    background-color: #1e90ff; /* Button color */
+    color: #fff; /* White text for buttons */
+    border: none;
+    padding: 10px 15px; /* Adjust button padding */
+    font-size: 14px; /* Adjust font size */
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px; /* Space above buttons */
+}
+
+#customModal button:hover {
+    background-color: #1c86ee; /* Darker blue on hover */
+}
+/* Style for the select dropdown */
+#selectedDebridService {
+    width: 100%; /* Make it take the full width */
+    padding: 10px; /* Add padding for better visual spacing */
+    margin-bottom: 15px; /* Space below the dropdown */
+    border: 1px solid #333; /* Dark border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #333; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    box-sizing: border-box; /* Ensure padding does not affect layout */
+    font-size: 16px; /* Adjust font size */
+    transition: background-color 0.3s; /* Smooth transition */
+    text-align: center; /* Center-align the text inside the dropdown */
+    text-align-last: center; /* Ensure the selected option is also centered */
+}
+
+/* Left-align text for the option elements */
+#selectedDebridService option {
+    text-align: center; /* Center-align the text inside the options */
+}
+
+/* Hover effect for the dropdown */
+#selectedDebridService:hover {
+    background-color: #444; /* Slightly lighter background on hover */
+}
+
+/* Focused state for the dropdown */
+#selectedDebridService:focus {
+    background-color: #555; /* Darker background when focused */
+    border-color: #1e90ff; /* Highlight with blue border when focused */
+    outline: none; /* Remove default outline */
+}
+
+/* Label style for the dropdown */
+label[for="selectedDebridService"] {
+    display: block; /* Make label block to take full width */
+    margin: 10px 0 5px; /* Space above and below the label */
+    font-weight: bold;
+    color: #e0e0e0; /* Light color */
+    font-size: 18px; /* Slightly larger font size */
+}
+/* Styling for the version display */
+#version-display {
+    font-size: 20px;
+    color: yellow; /* Light text color */
+    font-weight: normal;
+    margin-top: 10px;
+}
+#version-display-title {
+    font-size: 22px;
+    color: #e0e0e0; /* Light text color */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
