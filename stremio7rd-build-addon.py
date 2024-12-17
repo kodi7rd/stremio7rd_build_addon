@@ -9,7 +9,7 @@ app = Flask(__name__)
 # Constants
 LATEST_VERSION = "1.0.1"
 STREMIO7RD_URL = "https://i.imgur.com/CRpsxpE.jpeg"
-RED_THUMBS_UP_URL = "https://i.imgur.com/HwcDn4G.png"
+RED_THUMBS_DOWN_URL = "https://i.imgur.com/gY4MWuf.png"
 GREEN_THUMBS_UP_URL = "https://i.imgur.com/ntwsGcb.png"
 NEW_UPDATE_URL = "https://i.imgur.com/RZcmX2e.png"
 BUILD_QR_URL = "https://i.imgur.com/wbnhJUp.png"
@@ -62,7 +62,7 @@ def catalog(current_version=None):
         current_version = LATEST_VERSION
         
     # Set the poster based on whether versions are equal or not
-    current_version_poster = GREEN_THUMBS_UP_URL if current_version == LATEST_VERSION else RED_THUMBS_UP_URL
+    current_version_poster = GREEN_THUMBS_UP_URL if current_version == LATEST_VERSION else RED_THUMBS_DOWN_URL
     
     catalog_entry = [
         {
