@@ -1,15 +1,10 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "stremio7rd-build-addon.py",
-      "use": "@vercel/python"
-    }
+    { "src": "stremio7rd-build-addon.py", "use": "@vercel/python" },
+    { "src": "static/**", "use": "@vercel/static" }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "stremio7rd-build-addon.py"
-    }
+    { "src": "/(.*)", "dest": "/stremio7rd-build-addon.py" }
   ]
 }
